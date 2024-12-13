@@ -20,14 +20,14 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./GraduationGames
+        working-directory: ./
 
       - name: Build
         run: npm run build
-        working-directory: ./GraduationGames
+        working-directory: ./
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./GraduationGames/dist
+          publish_dir: ./dist
