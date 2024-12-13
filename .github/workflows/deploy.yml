@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # or your deployment branch
+      - main # Or your main working branch
 
 jobs:
   build-and-deploy:
@@ -19,12 +19,12 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: ./GraduationGames
         run: npm install
+        working-directory: ./GraduationGames
 
       - name: Build
-        working-directory: ./GraduationGames
         run: npm run build
+        working-directory: ./GraduationGames
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
